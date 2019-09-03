@@ -27,3 +27,8 @@
 
 1. `docker create busybox echo hi there` (to get ID of busybox container)
 2. `docker logs <ID>` (this will NOT re run / re create the container, it will just give logs of previous operations)
+
+### Kill/Stop a container
+
+1. `docker stop <containerID>` (do some cleanup and shutdown gracefully, after 10 secs its gonna get killed anyway)
+2. `docker kill <containerID>` (immediately kill a container)
