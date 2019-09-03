@@ -13,3 +13,7 @@
 2. `docker run busybox ping google.com` (to keep busy box running)
 3. `docker ps`
 4. `docker ps --all` (list all containers that were created on this env)
+
+### Difference between docker run, docker create, docker start
+
+1. `docker run` = `docker create <ImageName>` + `docker start -a <ContainerID>`
