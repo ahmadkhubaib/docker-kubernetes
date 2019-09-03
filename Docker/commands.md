@@ -17,3 +17,4 @@
 ### Difference between docker run, docker create, docker start
 
 1. `docker run` = `docker create <ImageName>` + `docker start -a <ContainerID>`
+2. `-a` flag is used to stdout all outputs of container to terminal
