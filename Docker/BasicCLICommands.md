@@ -1,3 +1,5 @@
+# Guidelines for interacting with docker client
+
 ### Hello World, basic command
 
 1. `docker run hello-world` (where everything starts, basic hello-world container)
