@@ -1,2 +1,7 @@
+### Hello World, basic command
+
 1. docker run hello-world (where everything starts)
-2. docker run busybox echo hi there (override startup command to echo hi there)
+
+### Override commands
+
+1. docker run busybox echo hi there (override startup command to echo hi there)
