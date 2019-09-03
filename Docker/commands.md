@@ -18,3 +18,7 @@
 
 1. `docker run` = `docker create <ImageName>` + `docker start -a <ContainerID>`
 2. `-a` flag is used to stdout all outputs of container to terminal
+
+### Clear docker history & cache of downloaded containers
+
+1. `docker system prune`
