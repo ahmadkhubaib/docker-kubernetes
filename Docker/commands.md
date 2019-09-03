@@ -32,3 +32,7 @@
 
 1. `docker stop <containerID>` (do some cleanup and shutdown gracefully, after 10 secs its gonna get killed anyway)
 2. `docker kill <containerID>` (immediately kill a container)
+
+### Executing commands in running container
+
+1. `docker exec -it <containerID> <command>` (e.g, docker exec -it xxxxxxx redis-cli, to use redis cli in redis docker server container)
