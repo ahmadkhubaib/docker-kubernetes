@@ -38,3 +38,4 @@
 1. `docker exec -it <containerID> <command>` (e.g, docker exec -it xxxxxxx redis-cli, to use redis cli in redis docker server container)
 2. when a container is created it has 3 channels STDIN,STDOUT,STDERR for input,ouput,error respectively. `-it` flag is used to pass input commands from our terminal to container STDIN channel.
 3. `docker exec -it <containerID> sh` (sh is used to spawn a shell in container)
+4. `docker run -it busybox sh` (example of using sh with busybox container)
