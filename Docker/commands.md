@@ -12,3 +12,4 @@
 1. `docker ps` (will return nothing if no container is running)
 2. `docker run busybox ping google.com` (to keep busy box running)
 3. `docker ps`
+4. `docker ps --all` (list all containers that were created on this env)
