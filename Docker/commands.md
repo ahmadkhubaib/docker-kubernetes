@@ -22,3 +22,8 @@
 ### Clear docker history & cache of downloaded containers
 
 1. `docker system prune`
+
+### Display logs
+
+1. `docker create busybox echo hi there` (to get ID of busy container)
+2. `docker logs <ID>` (this will NOT re run / re create the container, it will just give logs of previous operations)
