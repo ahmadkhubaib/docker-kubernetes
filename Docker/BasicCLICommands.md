@@ -3,6 +3,7 @@
 ### Hello World, basic command
 
 1. `docker run hello-world` (where everything starts, basic hello-world container)
+2. `docker run -p localport:containerport <containerID/tag>`
 
 ### Override commands
 
@@ -41,3 +42,9 @@
 2. when a container is created it has 3 channels STDIN,STDOUT,STDERR for input,ouput,error respectively. `-it` flag is used to pass input commands from our terminal to container STDIN channel.
 3. `docker exec -it <containerID> sh` (sh is used to spawn a shell in container)
 4. `docker run -it busybox sh` (example of using sh with busybox container)
+
+### Build Dockerfile
+
+1. File name should be `Dockerfile` in root directory of project.
+2. `docker build -t username/projectname:version .` (if version is not specified, its latest by default.) (. is use to specify current directory)
+3. `docker build -t kman4you/simpleserver .` (example)
