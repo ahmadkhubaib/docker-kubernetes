@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
       res.send({ Error: err.message });
     }
     res.send({ visits: visits });
-    client.set("visits", visits + 1);
+    client.set("visits", parseInt(visits) + 1);
   });
 });
 
