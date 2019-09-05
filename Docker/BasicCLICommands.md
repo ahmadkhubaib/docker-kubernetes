@@ -48,4 +48,4 @@
 1. File name should be `Dockerfile` in root directory of project.
 2. `docker build -t username/projectname:version .` (if version is not specified, its latest by default.) (. is use to specify current directory)
 3. `docker build -t kman4you/simpleserver .` (example)
-4. `docker build -f <filename>` (use -f and filename to specify custom dockerfile)
+4. `docker build -f <filename> .` (use -f and filename to specify custom dockerfile)
