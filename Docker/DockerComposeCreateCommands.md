@@ -12,4 +12,8 @@
 
 ## if there is a custom image use build: .
 
+## if Dockerfile is present with another name use build: context: . dockerfile: <name>
+
 ## map ports if needed with ports: - "localport:serviceport"
+
+## mount volumes to reference local files with container for change on the fly
