@@ -11,3 +11,8 @@
 ### List running containers of docker-compose
 
 1. `docker-compose ps`
+
+### Launch/stop in background
+
+1. `docker-compose up -d`
+2. `docker-compose down`
