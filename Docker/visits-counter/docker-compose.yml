@@ -1,8 +1,10 @@
-version: '3'
+version: "3"
 services:
   redis-server:
-    image: 'redis'
+    image: "redis"
+    restart: always
   node-app:
+    restart: always
     build: .
-    ports: 
+    ports:
       - "9876:8080"
