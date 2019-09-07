@@ -1,0 +1,10 @@
+version: "3"
+services:
+  frontend-app:
+    restart: always
+    build: .
+    ports:
+      - "8080:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
