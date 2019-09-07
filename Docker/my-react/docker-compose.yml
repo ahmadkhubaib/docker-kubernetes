@@ -1,10 +1,15 @@
 version: "3"
 services:
-  frontend-app:
-    restart: always
+  my-react:
     build: .
     ports:
-      - "8080:3000"
+      - "9876:3000"
     volumes:
       - /app/node_modules
-      - .:/app
+      - ./:/app
+  tests:
+    build: .
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    command: ["npm", "run", "test"]
