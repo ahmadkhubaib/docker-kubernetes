@@ -6,7 +6,7 @@ const redisClient = redis.createClient({
   port: keys.redisPort,
   retry_strategy: () => 1000
 });
-sub = redisClient.duplicate();
+const sub = redisClient.duplicate();
 
 fib = index => {
   if (index < 2) return 1;
