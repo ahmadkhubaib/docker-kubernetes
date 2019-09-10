@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t kman4you/react-cicd -f Dockerfile.dev .
+script:
+  - docker run kman4you/react-cicd npm run test -- --watchAll=false
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "react"
+  env: "React-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-693572239503"
+  bucket_path: "react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
