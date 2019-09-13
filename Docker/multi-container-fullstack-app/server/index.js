@@ -10,15 +10,21 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Postgres Client Setup
-const { Pool } = require('pg');
-const pgClient = new Pool({
-  user: keys.pgUser,
-  host: keys.pgHost,
-  database: keys.pgDatabase,
-  password: keys.pgPassword,
-  port: keys.pgPort
-});
-pgClient.on('error', () => console.log('Lost PG connection'));
+// const { Pool } = require('pg');
+const { Client } = require('pg');
+const conString = "postgres://postgres:mypassword@localhost:5432/postgres";
+const pgClient = new Client(conString)
+
+// const pgClient = new Pool({
+//   user:  'postgres',
+//   host: 'localhost',
+//   // database: keys.pgDatabase || 'postgres',
+//   // password: keys.pgPassword || 'postgres_password',
+//   idleTimeoutMillis: 30000,
+//   connectionTimeoutMillis: 2000,
+  
+// });
+// pgClient.on('error', () => console.log('Lost PG connection'));
 
 pgClient
   .query('CREATE TABLE IF NOT EXISTS values (number INT)')
@@ -28,7 +34,6 @@ pgClient
 const redis = require('redis');
 const redisClient = redis.createClient({
   host: keys.redisHost,
-  port: keys.redisPort,
   retry_strategy: () => 1000
 });
 const redisPublisher = redisClient.duplicate();
@@ -36,22 +41,26 @@ const redisPublisher = redisClient.duplicate();
 // Express route handlers
 
 app.get('/', (req, res) => {
+  console.log('in /' )
   res.send('Hi');
 });
 
 app.get('/values/all', async (req, res) => {
+  console.log('in / values/all' )
   const values = await pgClient.query('SELECT * from values');
 
   res.send(values.rows);
 });
 
 app.get('/values/current', async (req, res) => {
+  console.log('in / values/current' )
   redisClient.hgetall('values', (err, values) => {
     res.send(values);
   });
 });
 
 app.post('/values', async (req, res) => {
+  console.log('in / values' )
   const index = req.body.index;
 
   if (parseInt(index) > 40) {
