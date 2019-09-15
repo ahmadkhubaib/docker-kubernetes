@@ -1,0 +1,8 @@
+#break this command into given parts
+
+kubectl -n kube-system get secret | grep kman4you | awk '{print $1}'  
+
+# save the output 
+
+
+kubectl -n kube-system describe secret PASTE_SAVED_OUTPUT_FROM_ABOVE_COMMAND
