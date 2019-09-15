@@ -26,3 +26,4 @@
    2. follow hyper v setup folder from [HERE](https://github.com/kman4you/docker-kubernetes/tree/master/Kubernetes/Kubernetes-Setup-files "hyper v setup")
 4. wait.....
 5. when everything finishes run `minikube status` to check the status.
+6. `minikube dashboard` to open dashboard in local browser
