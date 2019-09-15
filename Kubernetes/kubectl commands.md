@@ -11,3 +11,7 @@
 ### To see status of services
 
 `kubectl get services`
+
+### To see information about a specific pod or all pods
+
+`kubectl describe <OBJECT_TYPE> <OBJECT_NAME>` e.g kubectl describe pod client-pod
