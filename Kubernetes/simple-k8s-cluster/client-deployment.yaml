@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: frontend
+  template:
+    metadata:
+      name: client-template
+      labels:
+        name: frontend
+    spec:
+      containers:
+        - name: client
+          image: kman4you/multi-client
+          ports:
+            - containerPort: 3000
