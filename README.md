@@ -15,7 +15,7 @@
 7. Follow guide `find token.txt` in previous link.
 8. Once everything is completed run `kubectl proxy` and access your UI from [http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/)
 9. Select Bearer option and paste your token in that field and you are good to go.
-10. `kubectl port-forward <pod-name> 8081:<PORT_NAME_TO ACCESS_LOCALLY>`
+10. `kubectl port-forward <pod-name> <PORT_EXPOSED_in_NodeService>`
 
 ### Setup, by completely removing docker, .kube(%USERPROFILE%) from OS
 
