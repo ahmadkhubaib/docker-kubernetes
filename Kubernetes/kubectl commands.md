@@ -2,7 +2,11 @@
 
 ### To create k8s object from yaml file
 
-`kubectl apply -f <kubernetes .yaml config file>`
+`kubectl apply -f <kubernetes object .yaml config file>`
+
+### To delete k8s object from yaml file
+
+`kubectl delete -f <kubernetes object .yaml config file>`
 
 ### To see status of pods
 
@@ -14,4 +18,4 @@
 
 ### To see information about a specific pod or all pods
 
-`kubectl describe <OBJECT_TYPE> <OBJECT_NAME>` e.g kubectl describe pod client-pod
+`kubectl describe <OBJECT_TYPE> <OBJECT_NAME>`
