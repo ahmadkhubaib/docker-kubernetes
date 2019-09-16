@@ -6,12 +6,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      name: frontend
+      name: web
   template:
     metadata:
       name: client-template
       labels:
-        name: frontend
+        name: web
     spec:
       containers:
         - name: client
