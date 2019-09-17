@@ -19,3 +19,7 @@
 ### To see information about a specific pod or all pods
 
 `kubectl describe <OBJECT_TYPE> <OBJECT_NAME>`
+
+### To update image in Deployment after pushing a new image version to docker hub
+
+`kubectl set image deployment/<deployment_metadata_name> <container_name>=dockerid/imagename:version`
